@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.detailstore.DetailStoreFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.26" />
+
+    <ImageView
+        android:id="@+id/img_store"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cons_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:cardCornerRadius="15dp"
+        android:elevation="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_visit"
+        app:layout_constraintTop_toBottomOf="@+id/guideline">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img_marker"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginRight="24dp"
+                android:src="@drawable/ic_marker"
+                android:layout_marginTop="10dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_photo"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_photo"
+                android:layout_marginTop="10dp"
+                app:layout_constraintRight_toLeftOf="@+id/img_marker"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_location"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_location"
+                android:layout_marginTop="10dp"
+                app:layout_constraintRight_toLeftOf="@+id/img_photo"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_set_location"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_baseline_place_24"
+                app:tint="@color/yellow"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_photo" />
+
+            <TextView
+                android:id="@+id/text_location_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_bold"
+                android:textColor="@color/red_500"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintLeft_toRightOf="@+id/img_set_location"
+                app:layout_constraintTop_toTopOf="@+id/img_set_location"
+                android:text="Lokasi Sudah Sesuai" />
+
+            <TextView
+                android:id="@+id/btn_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_rejected"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="8dp"
+                android:layout_marginStart="10dp"
+                android:visibility="gone"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Overline"
+                android:textColor="@color/red_500"
+                app:layout_constraintLeft_toRightOf="@+id/text_location_status"
+                app:layout_constraintTop_toTopOf="@+id/img_set_location"
+                android:text="Reset" />
+
+            <ImageView
+                android:id="@+id/img_icon_store"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_baseline_store_24"
+                app:tint="@color/yellow"
+                android:layout_marginTop="24dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_set_location" />
+
+            <TextView
+                android:id="@+id/text_store"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_bold"
+                android:textColor="@color/gray"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintLeft_toRightOf="@+id/img_icon_store"
+                app:layout_constraintTop_toTopOf="@+id/img_icon_store"
+                android:text="Toko A" />
+
+            <TextView
+                android:id="@+id/text_alamat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:textColor="@color/light_gray"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintLeft_toRightOf="@+id/img_icon_store"
+                app:layout_constraintTop_toBottomOf="@+id/text_store"
+                android:text="Jl. A Yani" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <TextView
+                android:id="@+id/text_outlet_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_bold"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toRightOf="@+id/img_icon_store"
+                app:layout_constraintTop_toBottomOf="@+id/text_alamat"
+                android:text="Tipe Outlet" />
+
+            <TextView
+                android:id="@+id/text_outlet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:textColor="@color/light_gray"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/text_alamat"
+                tools:text=": Outlet" />
+
+            <TextView
+                android:id="@+id/text_display_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_bold"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toRightOf="@+id/img_icon_store"
+                app:layout_constraintTop_toBottomOf="@+id/text_outlet"
+                android:text="Tipe Display" />
+
+            <TextView
+                android:id="@+id/text_display"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:textColor="@color/light_gray"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/text_outlet"
+                tools:text=": Outlet" />
+
+            <TextView
+                android:id="@+id/text_sub_display_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_bold"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toRightOf="@+id/img_icon_store"
+                app:layout_constraintTop_toBottomOf="@+id/text_display"
+                android:text="Tipe Sub Display" />
+
+            <TextView
+                android:id="@+id/text_sub_display"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:textColor="@color/light_gray"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/text_display"
+                tools:text=": Outlet" />
+
+            <TextView
+                android:id="@+id/text_ertm_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_bold"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toRightOf="@+id/img_icon_store"
+                app:layout_constraintTop_toBottomOf="@+id/text_sub_display"
+                android:text="ERTM" />
+
+            <TextView
+                android:id="@+id/text_ertm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:textColor="@color/light_gray"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/text_sub_display"
+                tools:text=": Outlet" />
+
+            <TextView
+                android:id="@+id/text_pareto_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_bold"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toRightOf="@+id/img_icon_store"
+                app:layout_constraintTop_toBottomOf="@+id/text_ertm"
+                android:text="Pareto" />
+
+            <TextView
+                android:id="@+id/text_pareto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:textColor="@color/light_gray"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/text_ertm"
+                tools:text=": Outlet" />
+
+            <TextView
+                android:id="@+id/text_merchandise_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_bold"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toRightOf="@+id/img_icon_store"
+                app:layout_constraintTop_toBottomOf="@+id/text_pareto"
+                android:text="E-Merchandising" />
+
+            <TextView
+                android:id="@+id/text_merchandise"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:textColor="@color/light_gray"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/text_pareto"
+                tools:text=": Outlet" />
+
+            <ImageView
+                android:id="@+id/img_icon_visit"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_baseline_store_24"
+                app:tint="@color/yellow"
+                android:layout_marginTop="24dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_merchandise" />
+
+            <TextView
+                android:id="@+id/text_visit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_bold"
+                android:textColor="@color/gray"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintLeft_toRightOf="@+id/img_icon_visit"
+                app:layout_constraintTop_toTopOf="@+id/img_icon_visit"
+                android:text="Last Visit" />
+
+            <TextView
+                android:id="@+id/text_last_visit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:textColor="@color/light_gray"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintLeft_toRightOf="@+id/img_icon_visit"
+                app:layout_constraintTop_toBottomOf="@+id/text_visit"
+                android:text="05-09-2018" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_visit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="12dp"
+        android:text="@string/cb_visit"
+        android:textAllCaps="false"
+        app:iconGravity="textStart"
+        app:backgroundTint="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/btn_not_visit"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_not_visit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="12dp"
+        android:text="@string/cb_not_visit"
+        android:textAllCaps="false"
+        app:iconGravity="textStart"
+        app:backgroundTint="@color/red_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn_visit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

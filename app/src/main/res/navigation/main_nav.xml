@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.pitjarustes.ui.home.mainmenu.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_listStoreFragment"
+            app:destination="@id/listStoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listStoreFragment"
+        android:name="com.example.pitjarustes.ui.home.store.ListStoreFragment"
+        android:label="fragment_list_store"
+        tools:layout="@layout/fragment_list_store" >
+        <action
+            android:id="@+id/action_listStoreFragment_to_detailStoreFragment"
+            app:destination="@id/detailStoreFragment" />
+        <action
+            android:id="@+id/action_listStoreFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@navigation/main_nav"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/detailStoreFragment"
+        android:name="com.example.pitjarustes.ui.home.detailstore.DetailStoreFragment"
+        android:label="fragment_detail_store"
+        tools:layout="@layout/fragment_detail_store">
+        <action
+            android:id="@+id/action_detailStoreFragment_to_storeMenuFragment"
+            app:destination="@id/storeMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/storeMenuFragment"
+        android:name="com.example.pitjarustes.ui.home.storemenu.StoreMenuFragment"
+        android:label="fragment_store_menu"
+        tools:layout="@layout/fragment_store_menu">
+        <argument
+            android:name="arg_id"
+            app:argType="integer"/>
+        <action
+            android:id="@+id/action_storeMenuFragment_to_listStoreFragment"
+            app:destination="@id/listStoreFragment" />
+
+    </fragment>
+</navigation>

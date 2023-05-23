@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">PitjarusTes</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--    button text-->
+    <string name="cta_login">Login</string>
+    <string name="cb_username">Keep Username</string>
+    <string name="cb_visit">Visit</string>
+    <string name="cb_not_visit">No Visit</string>
+
+    <!--    hint-->
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+
+    <!--    static text-->
+    <string name="version">App Ver 1.0.0 20013FEA6BCC820C</string>
+    <string name="score">Total Score</string>
+    <string name="actual_score">Actual Score</string>
+    <string name="percentage">Percentage</string>
+    <string name="menu">Menu</string>
+    <string name="marquee_text">untuk suport yang luar biasa di masa-masa covid-19 seperti ini. semoga kita selalu sehat dan tidak sakit</string>
+
+</resources>
